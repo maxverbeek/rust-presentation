@@ -15,7 +15,7 @@
       in {
         devShell = pkgs.mkShell {
           name = "devshell";
-          buildInputs = [ toolchain.default ];
+          buildInputs = [ toolchain.default pkgs.postgresql ];
         };
       });
 }
