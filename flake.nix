@@ -15,7 +15,7 @@
       in {
         devShell = pkgs.mkShell {
           name = "devshell";
-          buildInputs = [ toolchain.default pkgs.postgresql ];
+          buildInputs = with pkgs; [ toolchain.default postgresql sqlx-cli ];
         };
       });
 }
